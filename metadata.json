@@ -1,0 +1,6 @@
+{
+  "name": "BahCar — Site em Desenvolvimento",
+  "description": "Página oficial da BahCar em desenvolvimento. A nova mobilidade urbana gaúcha feita para Santa Maria — RS. Em breve no ar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

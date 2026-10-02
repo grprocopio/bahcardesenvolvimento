@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bahcar-black: #050505;
+    --bahcar-surface: #0e0e0e;
+    --bahcar-surface-card: #141414;
+    --bahcar-lime: #B8FF00;
+    --bahcar-lime-hover: #c9ff2e;
+    --bahcar-border: rgba(255, 255, 255, 0.08);
+  }
+
+  body {
+    background-color: #050505;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Glass & Glow utilities matching BahCar branding */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.liquid-glass-accent {
+  background: rgba(184, 255, 0, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(184, 255, 0, 0.25);
+  box-shadow: inset 0 1px 1px rgba(184, 255, 0, 0.2), 0 0 24px rgba(184, 255, 0, 0.12);
+}
+
+.glow-lime {
+  box-shadow: 0 0 24px rgba(184, 255, 0, 0.35);
+}
+
+.glow-lime-subtle {
+  box-shadow: 0 0 14px rgba(184, 255, 0, 0.2);
+}
+
+.text-glow {
+  text-shadow: 0 0 16px rgba(184, 255, 0, 0.4);
+}
+
+/* Subtle grid background */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.96);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
